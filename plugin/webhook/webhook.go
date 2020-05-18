@@ -17,7 +17,7 @@ package webhook
 import (
 	"context"
 
-	"github.com/nsigarora/drone-go/drone"
+	"github.com/drone/drone-go/drone"
 )
 
 // V1 is version 1 of the admission API
