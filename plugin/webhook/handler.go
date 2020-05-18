@@ -81,7 +81,7 @@ func (p *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = p.plugin.Deliver(r.Context(), req)
+	_, err = p.plugin.Deliver(r.Context(), req)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
 	} else {
