@@ -17,6 +17,7 @@ package webhook
 import (
 	"context"
 
+	"github.com/drone/drone-go/drone"
 	"github.com/drone/drone-go/plugin/internal/client"
 )
 
@@ -33,6 +34,8 @@ type pluginClient struct {
 	client *client.Client
 }
 
-func (c *pluginClient) Deliver(ctx context.Context, in *Request) error {
-	return c.client.Do(in, nil)
+func (c *pluginClient) Deliver(ctx context.Context, in *Request) (*drone.Config, error) {
+	res := new(drone.Config)
+	err := c.client.Do(in, nil)
+	return res, err
 }
