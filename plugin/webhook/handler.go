@@ -84,7 +84,7 @@ func (p *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	cfg, err := p.plugin.Deliver(r.Context(), req)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
-	} else if cfg == nil {
+	} else if cfg != nil {
 		w.WriteHeader(204)
 	}
 }
