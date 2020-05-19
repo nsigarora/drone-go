@@ -17,7 +17,7 @@ package environ
 import (
 	"context"
 
-	"github.com/drone/drone-go/plugin/internal/client"
+	"github.com/nsigarora/drone-go/plugin/internal/client"
 )
 
 // Client returns a new plugin client.

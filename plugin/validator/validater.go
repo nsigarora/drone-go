@@ -17,7 +17,7 @@ package validator
 import (
 	"context"
 
-	"github.com/drone/drone-go/drone"
+	"github.com/nsigarora/drone-go/drone"
 )
 
 // V1 is version 1 of the validator API

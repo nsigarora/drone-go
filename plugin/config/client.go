@@ -17,8 +17,8 @@ package config
 import (
 	"context"
 
-	"github.com/drone/drone-go/drone"
-	"github.com/drone/drone-go/plugin/internal/client"
+	"github.com/nsigarora/drone-go/drone"
+	"github.com/nsigarora/drone-go/plugin/internal/client"
 )
 
 // Client returns a new plugin client.
