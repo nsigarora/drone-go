@@ -26,6 +26,7 @@ import (
 	"time"
 
 	"github.com/99designs/httpsignatures-go"
+	"github.com/nsigarora/drone-go/drone"
 )
 
 func TestHandler(t *testing.T) {
@@ -118,9 +119,10 @@ func TestHandler_InvalidSignature(t *testing.T) {
 }
 
 type mockPlugin struct {
+	cfg *drone.Config
 	err error
 }
 
-func (m *mockPlugin) Deliver(ctx context.Context, req *Request) error {
-	return m.err
+func (m *mockPlugin) Deliver(ctx context.Context, req *Request) (*drone.Config, error) {
+	return m.cfg, m.err
 }
